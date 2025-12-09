@@ -104,3 +104,29 @@ After calling the function.
 The most frequently used built-in decorators are @staticmethod, @classmethod and @property.
 
 ---
+<pre>
+try: Runs the risky code that might cause an error.
+except: Catches and handles the error if one occurs.
+else: Executes only if no exception occurs in try.
+finally: Runs regardless of what happens useful for cleanup tasks like closing files.
+
+---
+TypeError	Raised when an operation or function is applied to an object of inappropriate type (e.g., adding a string to an integer).
+ValueError	Raised when a function receives an argument of the correct type but with an invalid value (e.g., converting "abc" to an integer).
+ImportError	Raised when there is a problem with an import statement.
+ModuleNotFoundError	Raised when a module cannot be found.
+IOError	Alias for OSError (in modern Python both refer to the same base error).
+FileNotFoundError	Raised when a file or directory is requested but cannot be found.
+StopIteration	Raised when the next() function is called but the iterator has no more items.
+KeyboardInterrupt	Raised when the user interrupts the program’s execution (e.g., pressing Ctrl+C).
+SystemExit	Raised when sys.exit() is called to terminate the program.
+NotImplementedError	Raised when a method that should be implemented in a subclass is not implemented.
+RuntimeError	Raised when an error occurs that doesn’t fall under other categories.
+RecursionError	Raised when maximum recursion depth is exceeded.
+SyntaxError	Raised when there is a mistake in Python syntax.
+IndentationError	Raised when indentation is not correct in Python code.
+TabError	Raised when there is inconsistent use of tabs and spaces in indentation.
+UnicodeError	Raised when encoding or decoding Unicode text fails.
+
+---
+
