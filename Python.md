@@ -1,3 +1,4 @@
+<pre>
 Numeric: int, float, complex
 Sequence Type: string, list, tuple
 Mapping Type: dict
@@ -50,7 +51,7 @@ def fun(*args):
 def fun(**kwargs):
     for k, val in kwargs.items():
         print(k, val)
-        
+</pre>       
 ---
 Converting map object to a list: By default, map() function returns a map object, which is an iterator. In many cases, we will need to convert this iterator to a list to work with the results directly.
 
@@ -58,12 +59,13 @@ Converting map object to a list: By default, map() function returns a map object
 filter() in python: filter() function is used to extract elements from an iterable (like a list, tuple or set) that satisfy a given condition. It works by applying a function to each element and keeping only those for which function returns True.
 
 ---
+<pre>
 a = [1, 2, 3, 4, 5, 6]
 b = filter(lambda x: x % 2 == 0, a)
 c = map(lambda x: x * 2, b)
 filter(lambda x: x % 2 == 0, a): Selects only even numbers from the list ([2, 4, 6]).
 map(lambda x: x * 2, b): Doubles each of the filtered even numbers ([4, 8, 12]).
-
+</pre>
 ---
 reduce() in Python: reduce() function (from functools) applies a function cumulatively to an iterable, reducing it to a single value. It’s handy for concise tasks like summing, multiplying (factorial), finding max/min, concatenating strings or flattening lists. Use it for simple one-line reductions, avoid it for complex logic (loops are clearer) or when intermediate results are needed.
 ```
