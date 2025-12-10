@@ -24,7 +24,6 @@ cd hotel_search
 ```
 python manage.py startapp home
 ```
-Use the Django admin panel at http://127.0.0.1:8000/admin/ to add hotel records.
 
 ---
 
@@ -42,7 +41,7 @@ hotel_search/
 │            └── home.html
 └── manage.py
 ```
-Then we need to register app in settings.
+#### Then we need to register app in settings.
 <pre>
 INSTALLED_APPS = [   
     "django.contrib.admin",
@@ -244,6 +243,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 ```
+#### Use the Django admin panel at http://127.0.0.1:8000/admin/ to add hotel records.
 
 ---
 
