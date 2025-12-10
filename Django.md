@@ -24,6 +24,7 @@ cd hotel_search
 ```
 python manage.py startapp home
 ```
+Use the Django admin panel at http://127.0.0.1:8000/admin/ to add hotel records.
 
 ---
 
