@@ -2,17 +2,12 @@
 
 Data structures are ways to organize and store data so it can be used efficiently. They are essential in computer science for managing and processing information in programs. Common types of data structures include arrays, linked lists, stacks, queues, trees, and graphs. Each structure is designed for specific tasks, such as searching, sorting, or managing hierarchical data. Understanding data structures helps in solving problems faster and writing better algorithms.
 
----
-
 ## Types of Data Structures
 
 1. **Linear Data Structures**: In linear data structures, elements are arranged in a sequential order. Each element is connected to its previous and next element, making traversal straightforward.
-
 2. **Non-Linear Data Structures**: In non-linear data structures, elements are not arranged sequentially. They are connected in a hierarchical or network-like structure.
 
----
-
-## Table of Contents
+## Table of Content
 
 * Arrays
 * Stacks
@@ -50,8 +45,8 @@ int arr[5] = {1, 2, 3, 4, 5};
 ### Accessing Elements
 
 ```c
-arr[0] = 10;          // Assigns 10 to the first element
-printf("%d", arr[2]); // Prints the third element
+arr[0] = 10;  // Assigns 10 to the first element
+printf("%d", arr[2]);  // Prints the third element
 ```
 
 ### Formulas
@@ -81,11 +76,11 @@ int matrix[2][3] = {
 
 ```
 Loc(arr[k]) = base(arr) + w * k
-w = number of bytes per storage location of one element
-k = index of array whose address we want to calculate
+w = number of bytes per element
+k = index of array element
 ```
 
-### Storage Orders for 2D Arrays
+#### Two-Dimensional Arrays Storage
 
 * **Column Major Order**:
 
@@ -99,15 +94,22 @@ Loc(arr[i][j]) = base(arr) + w * (m * j + i)
 Loc(arr[i][j]) = base(arr) + w * (n * i + j)
 ```
 
-### Common Operations on Arrays
+### Common Operations
 
-* Traversal
-* Insertion
-* Deletion
-* Searching (Linear & Binary Search)
-* Sorting (Bubble Sort, Selection Sort, Quick Sort)
+* **Traversal**:
 
-[Read more about Arrays]
+```c
+for (int i = 0; i < 5; i++) {
+     printf("%d ", arr[i]);
+}
+```
+
+* **Insertion, Deletion, Searching, Sorting**
+* **Linear Search**: O(n)
+* **Binary Search**: O(log n) (requires sorted array)
+* Sorting algorithms: Bubble Sort, Selection Sort, Quick Sort
+
+read more about - Arrays
 
 ---
 
@@ -123,25 +125,32 @@ A stack is a linear data structure that follows the Last In, First Out (LIFO) pr
 
 ### Notations
 
-* Infix: `A * (B + C) / D`
-* Postfix: `A B C + * D /`
-* Prefix: `/ * A + B C D`
+* **Infix**: X + Y (operators between operands)
+* **Postfix (Reverse Polish)**: XY+ (operators after operands)
+* **Prefix (Polish)**: +XY (operators before operands)
 
 ### Implementation
 
 * Arrays
 * Linked Lists
-* Tower of Hanoi (Mathematical Puzzle)
 
-Time Complexity for Tower of Hanoi: O(2^n)
+### Tower of Hanoi
 
-[Read more about Stacks]
+Rules:
+
+* Move one disk at a time
+* Only top disk can be moved
+* No disk may be placed on smaller disk
+* Moves required: 2^n - 1
+* Time complexity: O(2^n)
+
+read more about - Stacks
 
 ---
 
 ## Queues
 
-A queue follows the First In, First Out (FIFO) principle.
+A queue follows First In, First Out (FIFO) principle.
 
 ### Types of Queues
 
@@ -152,24 +161,23 @@ A queue follows the First In, First Out (FIFO) principle.
 
 ### Operations
 
-* Enqueue
-* Dequeue
-* Peek
-* Traversal
-* Front & Rear Access
+* **Enqueue**: Add item
+* **Dequeue**: Remove item
+* **Peek**: Get front element
+* **Traversal**: Iterate through all elements
 
 ### Implementation
 
 * Arrays
 * Linked Lists
 
-[Read more about Queues]
+read more about - Queues
 
 ---
 
 ## Linked Lists
 
-A linked list is a linear data structure with nodes connected using pointers.
+A linked list is a linear data structure where elements (nodes) are connected using pointers.
 
 ### Types
 
@@ -180,16 +188,15 @@ A linked list is a linear data structure with nodes connected using pointers.
 
 ### Operations
 
-* Traversal
-* Insertion
-* Deletion
-* Search
+* Traversal: O(n)
+* Insertion: O(1) at beginning, O(n) elsewhere
+* Deletion: O(1) at beginning, O(n) elsewhere
+* Search: O(n)
 
 ### Advantages
 
-* Dynamic Memory Allocation
-* Ease of insertion/deletion
-* Flexible Size
+* Dynamic memory allocation
+* Flexible size
 
 ### Drawbacks
 
@@ -205,7 +212,7 @@ struct node {
 };
 ```
 
-[Read more about Linked List]
+read more about - Linked List
 
 ---
 
@@ -217,7 +224,7 @@ A tree is a non-linear hierarchical data structure.
 
 * Node, Edge, Degree, Path, Binary Tree
 
-### Types
+### Types of Trees
 
 * General Tree
 * Binary Tree
@@ -231,44 +238,28 @@ A tree is a non-linear hierarchical data structure.
 
 ### Traversals
 
-* Inorder
-* Preorder
-* Postorder
-* Level Order (BFS)
+* **Inorder (L, Root, R)**
+* **Preorder (Root, L, R)**
+* **Postorder (L, R, Root)**
+* **Level Order (BFS)**
 
-[Read more about Binary Search Tree]
-
----
-
-## Heap
-
-Special tree-based structure that satisfies max-heap or min-heap property.
-
-### Operations
+### BST Operations
 
 * Insertion
-* Deletion (Root)
-* Heapify
-* Heap Sort
+* Deletion (leaf, one child, two children)
+* Search
 
-[Read more about Heap]
+### Heap
 
----
+* Max-Heap / Min-Heap
+* Operations: Insertion, Deletion, Heapify, Heap Sort
 
-## AVL Tree
+### AVL Tree
 
-Self-balancing binary search tree with rotations to maintain height balance.
+* Self-balancing BST
+* Rotations: LL, RR, LR, RL
 
-### Rotations
-
-* Left-Left (LL)
-* Right-Right (RR)
-* Left-Right (LR)
-* Right-Left (RL)
-
-### Operations Time Complexity Table
-
-| Operation          | Binary Tree | BST      | Heap     | AVL Tree |
+| Operation          | Binary Tree | BST      | Heap     | AVL      |
 | ------------------ | ----------- | -------- | -------- | -------- |
 | Insertion          | O(1)        | O(log n) | O(log n) | O(log n) |
 | Deletion           | O(1)        | O(log n) | O(log n) | O(log n) |
@@ -277,34 +268,73 @@ Self-balancing binary search tree with rotations to maintain height balance.
 | Balance Check      | O(n)        | O(n)     | N/A      | O(log n) |
 | Height Calculation | O(n)        | O(n)     | O(n)     | O(log n) |
 
-[Read more about AVL Tree]
+read more about - AVL Tree
 
 ---
 
 ## Graphs
 
-Non-linear data structure with vertices and edges.
+A graph consists of vertices and edges connecting pairs of vertices.
 
-### Traversal Techniques
+### Traversals
 
-* Depth First Search (DFS)
-* Breadth First Search (BFS)
+1. **DFS**
 
-[Read more about Graphs]
+```c
+void DFS(int vertex, int visited[], int graph[][V]) {
+     printf("%d ", vertex);
+     visited[vertex] = 1;
+     for (int i = 0; i < V; i++) {
+         if (graph[vertex][i] == 1 && !visited[i]) {
+             DFS(i, visited, graph);
+         }
+     }
+}
+```
+
+2. **BFS**
+
+```c
+void BFS(int start, int graph[][V]) {
+    int visited[V] = {0};
+    int queue[V], front = 0, rear = 0;
+
+    queue[rear++] = start;
+    visited[start] = 1;
+
+    while (front != rear) {
+        int current = queue[front++];
+        printf("%d ", current);
+
+        for (int i = 0; i < V; i++) {
+            if (graph[current][i] == 1 && !visited[i]) {
+                queue[rear++] = i;
+                visited[i] = 1;
+            }
+        }
+    }
+}
+```
+
+read more about - Graphs
 
 ---
 
 ## Hashing
 
-Technique to map data of arbitrary size to fixed-size hash values.
+Hashing maps data of arbitrary size to fixed-size hash values.
 
 ### Terminology
 
 * Key, Hash Value, Bucket, Load Factor
 
-### Collision Resolution Techniques
+### Collision Resolution
 
-* Chaining
-* Open Addressing (Linear, Quadratic, Double Hashing)
+1. **Chaining**: Linked list in each bucket
+2. **Open Addressing**: Linear, Quadratic, Double Hashing
 
-[Read more about Hashing]
+```c
+Linear Probing: index = (hash + i) % table_size
+Quadratic Probing: index = (hash + i^2) % table_size
+Double Hashing: index = (hash1 + i * hash2) % table_size
+```
