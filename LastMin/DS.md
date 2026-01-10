@@ -256,4 +256,11 @@ read more about - Graphs
 
 Mapping data to fixed-size values using a hash function.
 
-**Terminology:** Key, Hash Value, Bucket, Loa
+**Terminology:** Key, Hash Value, Bucket, Load Factor
+
+**Collision Resolution:**
+
+* Chaining (linked lists in bucket)
+* Open Addressing (Linear, Quadratic, Double Hashing)
+
+read more about - Hashing
