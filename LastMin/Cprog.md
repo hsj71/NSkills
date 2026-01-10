@@ -1,1 +1,66 @@
-# C Programming – Last Minute Notes C programming is a powerful and widely-used programming language that forms the backbone of many modern technologies. Known for its simplicity and efficiency, it is the foundation for learning advanced programming concepts. This Last Minute Notes document provides a quick and concise revision of key topics in C programming, including data types, operators, control flow statements, functions, and storage classes. ## Table of Contents Data Types and Operators Control Flow Statements Storage Class & Functions ## 1. Data Types and Operators ### Data Types #### 1. Primitive Data Types (a) Integer Types: short int, unsigned short int, int, unsigned int, long int, unsigned long int, long long int, unsigned long long int (b) Character Types: char, unsigned char (c) Floating Types: float, double, long double (d) Other Types: void, bool #### 2. Non-Primitive Data Types (a) Derived Data Types: Array, Pointer, String (b) User-Defined Data Types: Structure, Union, Enum, Typedef Notes: The C standard does not specify exact size for data types. Size depends on compiler and system architecture. Short and int are at least 16 bits. Long is at least 32 bits. ### Operators #### 1. Arithmetic Operators + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus – integers only) #### 2. Relational Operators <, >, <=, >=, ==, != #### 3. Logical Operators && (Logical AND), || (Logical OR), ! (Logical NOT) #### 4. Assignment Operator = Example: int a = 5; #### 5. Increment and Decrement Operators ++x (Pre-increment), x++ (Post-increment), --x (Pre-decrement), x-- (Post-decrement) Example: int x = 5; printf("%d", ++x); #### 6. Bitwise Operators & (AND), | (OR), ^ (XOR), ~ (NOT), << (Left Shift), >> (Right Shift) Example: int a = 5; int b = a << 1; #### 7. Ternary Operator Syntax: condition ? value_if_true : value_if_false Example: int max = (a > b) ? a : b; ## 2. Control Flow Statements ### A. Decision-Making Statements If Statement: if(condition){} If-Else Statement: if(condition){} else {} Else-If Ladder: if(){} else if(){} else {} Switch Statement: switch(expression){ case value: break; default: } ### B. Looping Statements For Loop: for(initialization; condition; increment/decrement){} While Loop: while(condition){} Do-While Loop: do{} while(condition); ### C. Jump Statements Break Statement, Continue Statement, Goto Statement ## 3. Storage Class & Functions ### 1. Memory Organization of a C Program Code Segment: stores executable instructions (read-only) Data Segment: initialized and uninitialized global/static variables Stack: local variables and function calls (LIFO) Heap: dynamic memory allocation using malloc() or calloc() ### 2. Storage Classes in C Storage classes define scope, lifetime, and default value of variables. ### 3. Functions in C Function Declaration: return_type function_name(parameters); Function Definition: return_type function_name(parameters){ } ### 4. Recursion A function calling itself with a base condition to stop recursion Example: int factorial(int n){ if(n==0) return 1; return n*factorial(n-1); } ### 5. Static and Dynamic Scoping Static Scoping: variable binding determined at compile time, scope depends on declaration Example: int a=10; void main(){ { int a=1; { printf("%d",a); } } } Dynamic Scoping: variable binding determined at runtime, scope based on call stack Example: int i; program main(){ i=10; call f(); } procedure f(){ int c=20; call g(); } procedure g(){ print i; }
+# C Programming – Last Minute Notes
+C programming is a powerful and widely-used programming language that forms the backbone of many modern technologies. Known for its simplicity and efficiency, it is the foundation for learning advanced programming concepts. This Last Minute Notes document provides a quick and concise revision of key topics in C programming, including data types, operators, control flow statements, functions, and storage classes.
+## Table of Contents
+Data Types and Operators
+Control Flow Statements
+Storage Class & Functions
+## 1. Data Types and Operators
+### Data Types
+#### 1. Primitive Data Types
+(a) Integer Types: short int, unsigned short int, int, unsigned int, long int, unsigned long int, long long int, unsigned long long int
+(b) Character Types: char, unsigned char
+(c) Floating Types: float, double, long double
+(d) Other Types: void, bool
+#### 2. Non-Primitive Data Types
+(a) Derived Data Types: Array, Pointer, String
+(b) User-Defined Data Types: Structure, Union, Enum, Typedef
+Note: The C standard does not specify exact size for data types. Size depends on compiler and system architecture. Short and int are at least 16 bits. Long is at least 32 bits.
+### Operators
+#### 1. Arithmetic Operators
++ (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus – integers only)
+#### 2. Relational Operators
+<, >, <=, >=, ==, !=
+#### 3. Logical Operators
+&& (Logical AND), || (Logical OR), ! (Logical NOT)
+#### 4. Assignment Operator
+= Example: int a = 5;
+#### 5. Increment and Decrement Operators
+++x (Pre-increment), x++ (Post-increment), --x (Pre-decrement), x-- (Post-decrement)
+Example: int x = 5; printf("%d", ++x);
+#### 6. Bitwise Operators
+& (AND), | (OR), ^ (XOR), ~ (NOT), << (Left Shift), >> (Right Shift)
+Example: int a = 5; int b = a << 1;
+#### 7. Ternary Operator
+Syntax: condition ? value_if_true : value_if_false
+Example: int max = (a > b) ? a : b;
+## 2. Control Flow Statements
+### A. Decision-Making Statements
+If Statement: if(condition){}
+If-Else Statement: if(condition){} else {}
+Else-If Ladder: if(){} else if(){} else {}
+Switch Statement: switch(expression){ case value: break; default: }
+### B. Looping Statements
+For Loop: for(initialization; condition; increment/decrement){}
+While Loop: while(condition){}
+Do-While Loop: do{} while(condition);
+### C. Jump Statements
+Break Statement, Continue Statement, Goto Statement
+## 3. Storage Class & Functions
+### 1. Memory Organization of a C Program
+Code Segment: executable instructions (read-only)
+Data Segment: initialized and uninitialized global/static variables
+Stack: local variables and function calls (LIFO)
+Heap: dynamic memory allocation using malloc() or calloc()
+### 2. Storage Classes in C
+Storage classes define scope, lifetime, and default value of variables.
+### 3. Functions in C
+Function Declaration: return_type function_name(parameters);
+Function Definition: return_type function_name(parameters){}
+### 4. Recursion
+A function that calls itself and requires a base condition.
+Example: int factorial(int n){ if(n==0) return 1; return n*factorial(n-1); }
+### 5. Static and Dynamic Scoping
+Static Scoping: variable binding determined at compile time and depends on declaration.
+Example: int a=10; void main(){ { int a=1; { printf("%d",a); } } }
+Dynamic Scoping: variable binding determined at runtime and based on call stack.
+Example: int i; program main(){ i=10; call f(); } procedure f(){ int c=20; call g(); } procedure g(){ print i; }
