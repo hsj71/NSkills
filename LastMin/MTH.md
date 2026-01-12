@@ -383,5 +383,295 @@ f'(c) = 0
 * Volume and surface area of revolution
 
 ---
+# Calculus
+
+## Existence of Limit
+
+The limit of a function (f(x)) at (x = a) exists **only when** its left-hand limit (LHL) and right-hand limit (RHL) both exist **and are equal**:
+
+[
+\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)
+]
+
+If this condition is not satisfied, the limit at (x=a) does not exist.
+
+---
+
+## Some Common Limits
+
+[
+\lim_{x \to 0} \frac{\sin x}{x} = 1
+]
+
+[
+\lim_{x \to 0} \cos x = 1
+]
+
+[
+\lim_{x \to 0} \frac{\tan x}{x} = 1
+]
+
+[
+\lim_{x \to 0} \frac{1-\cos x}{x} = 0
+]
+
+[
+\lim_{x \to 0} \frac{\sin x^\circ}{x} = \frac{\pi}{180}
+]
+
+[
+\lim_{x \to a} \frac{x^n - a^n}{x-a} = n a^{n-1}
+]
+
+[
+\lim_{x \to \infty} \left(1 + \frac{k}{x}\right)^{mx} = e^{mk}
+]
+
+[
+\lim_{x \to 0} (1+x)^{1/x} = e
+]
+
+[
+\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a
+]
+
+[
+\lim_{x \to 0} \frac{e^x - 1}{x} = 1
+]
+
+[
+\lim_{x \to 0} \frac{\ln(1+x)}{x} = 1
+]
+
+[
+\lim_{x \to \infty} x^{1/x} = 1
+]
+
+---
+
+## L'Hospital's Rule
+
+If the limit
+
+[
+\lim_{x \to a} \frac{f(x)}{g(x)}
+]
+
+is of the indeterminate form **(0/0)** or **(\infty/\infty)**, then it can be evaluated using **L'Hospital’s Rule**:
+
+[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
+]
+
+If the indeterminate form still persists, the rule may be applied repeatedly until the limit is resolved.
+
+---
+
+## Continuity
+
+A function is said to be **continuous** if its graph is a single unbroken curve.
+
+Formally, a real-valued function (f(x)) is continuous at (x = x_0) if:
+
+[
+\lim_{x \to x_0} f(x) = f(x_0)
+]
+
+If (f(x)) is continuous at (x=x_0), then:
+
+[
+\lim_{x \to x_0^-} f(x) = \lim_{x \to x_0^+} f(x) = \lim_{x \to x_0} f(x)
+]
+
+Functions that are not continuous are called **discontinuous functions**.
+
+---
+
+## Differentiability
+
+The derivative of a function (f(x)) with respect to (x) is defined as:
+
+[
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+]
+
+A function is **differentiable** if this limit exists at every point in its domain.
+
+### Important Note
+
+* If a function is differentiable at a point, it is **always continuous** at that point.
+* A function can be continuous but **not differentiable**.
+
+**Example:**
+(f(x) = |x|) is continuous at (x=0) but not differentiable there.
+
+---
+
+## Lagrange’s Mean Value Theorem (LMVT)
+
+Let (f:[a,b] \to \mathbb{R}) satisfy:
+
+1. (f(x)) is continuous on ([a,b])
+2. (f(x)) is differentiable on ((a,b))
+
+Then there exists at least one (c \in (a,b)) such that:
+
+[
+f'(c) = \frac{f(b) - f(a)}{b - a}
+]
+
+---
+
+## Rolle’s Mean Value Theorem
+
+If (f(x)) satisfies:
+
+1. Continuity on ([a,b])
+2. Differentiability on ((a,b))
+3. (f(a) = f(b))
+
+Then there exists at least one (c \in (a,b)) such that:
+
+[
+f'(c) = 0
+]
+
+---
+
+## Differentiation Formulas
+
+| Function                   | Derivative         |
+| -------------------------- | ------------------ |
+| (\frac{d}{dx}(c))          | 0                  |
+| (\frac{d}{dx}(cf(x)))      | (c f'(x))          |
+| (\frac{d}{dx}(x))          | 1                  |
+| (\frac{d}{dx}(x^n))        | (n x^{n-1})        |
+| (\frac{d}{dx}(f(g(x))))    | (f'(g(x))g'(x))    |
+| (\frac{d}{dx}(a^x))        | (a^x \ln a)        |
+| (\frac{d}{dx}(\ln x))      | (1/x)              |
+| (\frac{d}{dx}(e^x))        | (e^x)              |
+| (\frac{d}{dx}(\sin x))     | (\cos x)           |
+| (\frac{d}{dx}(\cos x))     | (-\sin x)          |
+| (\frac{d}{dx}(\tan x))     | (\sec^2 x)         |
+| (\frac{d}{dx}(\sec x))     | (\sec x \tan x)    |
+| (\frac{d}{dx}(\cosec x))   | (-\cosec x \cot x) |
+| (\frac{d}{dx}(\cot x))     | (-\cosec^2 x)      |
+| (\frac{d}{dx}(\sin^{-1}x)) | (1/\sqrt{1-x^2})   |
+| (\frac{d}{dx}(\cos^{-1}x)) | (-1/\sqrt{1-x^2})  |
+| (\frac{d}{dx}(\tan^{-1}x)) | (1/(1+x^2))        |
+
+---
+
+## Maxima and Minima
+
+### Critical Points
+
+Points where:
+
+* (f'(x) = 0), or
+* (f'(x)) is undefined
+
+### First Derivative Test
+
+* Positive → Negative: **Local Maximum**
+* Negative → Positive: **Local Minimum**
+* No sign change: **Point of Inflection**
+
+### Second Derivative Test
+
+* (f''(c) > 0): Local Minimum
+* (f''(c) < 0): Local Maximum
+* (f''(c) = 0): Inconclusive
+
+---
+
+## Integrals
+
+### Indefinite Integrals
+
+[
+\int f(x) dx = F(x) + C
+]
+
+### Fundamental Integration Formulas
+
+[
+\int x^n dx = \frac{x^{n+1}}{n+1} + C
+]
+
+[
+\int \frac{1}{x} dx = \ln|x| + C
+]
+
+[
+\int e^x dx = e^x + C
+]
+
+[
+\int \sin x dx = -\cos x + C
+]
+
+[
+\int \cos x dx = \sin x + C
+]
+
+---
+
+## Definite Integrals
+
+[
+\int_a^b f(x) dx = F(b) - F(a)
+]
+
+### Properties
+
+[
+\int_a^b f(x) dx = - \int_b^a f(x) dx
+]
+
+[
+\int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx
+]
+
+---
+
+## Application of Integrals
+
+### Area Under Curve
+
+[
+\text{Area} = \int_a^b f(x) dx
+]
+
+### Area Between Two Curves
+
+[
+\text{Area} = \int_a^b |f(x) - g(x)| dx
+]
+
+### Length of Curve
+
+[
+L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2} dx
+]
+
+### Volume of Solids of Revolution
+
+**Disk Method:**
+[
+V = \pi \int_a^b [f(x)]^2 dx
+]
+
+**Shell Method:**
+[
+V = 2\pi \int_a^b x f(x) dx
+]
+
+### Surface Area of Revolution
+
+[
+S = 2\pi \int_a^b f(x) \sqrt{1 + \left(\frac{dy}{dx}\right)^2} dx
+]
+
 
 
