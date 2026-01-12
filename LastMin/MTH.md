@@ -62,14 +62,14 @@ The transpose ( A^T ) of an ( m \times n ) matrix ( A = [a_{ij}] ) is an ( n \ti
 The **adjoint** of a square matrix is the transpose of its **cofactor matrix**.
 
 ### Properties of Adjoint
-
+$$
 * ( A(\text{Adj }A) = (\text{Adj }A)A = |A|I_n )
 * ( \text{Adj}(AB) = (\text{Adj }B)(\text{Adj }A) )
 * ( |\text{Adj }A| = |A|^{n-1} )
 * ( \text{Adj}(\text{Adj }A) = |A|^{n-2} A )
 * ( \text{Adj}(A^T) = (\text{Adj }A)^T )
 * ( \text{Adj}(kA) = k^{n-1}\text{Adj }A )
-
+$$
 ---
 
 ## Inverse of a Matrix
