@@ -1,4 +1,4 @@
-# Database Management System (DBMS) – Complete Notes (No Data Skipped)
+# Database Management System (DBMS)
 
 A **Database Management System (DBMS)** is an organized collection of interrelated data that helps in accessing data quickly, along with efficient insertion and deletion of data into the DBMS. DBMS organizes data in the form of tables, schemas, records, etc.
 
