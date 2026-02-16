@@ -195,3 +195,87 @@ class Solution:
 ```
 ---
 
+## new problem  6
+```
+Meeting Rooms
+Difficulty: EasyAccuracy: 65.12%Submissions: 38K+Points: 2
+Given a 2D array arr[][], where arr[i][0] is the starting time of ith meeting and arr[i][1] is the ending time of ith meeting, the task is to check if it is possible for a person to attend all the meetings such that he can attend only one meeting at a particular time.
+
+Note: A person can attend a meeting if its starting time is greater than or equal to the previous meeting's ending time.
+
+Examples:
+
+Input: arr[][] = [[1, 4], [10, 15], [7, 10]]
+Output: true
+Explanation: Since all the meetings are held at different times, it is possible to attend all the meetings.
+Input: arr[][] = [[2, 4], [9, 12], [6, 10]]
+Output: false
+Explanation: Since the second and third meeting overlap, a person cannot attend all the meetings.
+Constraints:
+1 ≤ arr.size() ≤ 105
+0 ≤ arr[i] ≤ 2*106
+```
+```
+class Solution:
+    def canAttend(self, arr):
+        # Code Here
+        arr.sort(key=lambda x: x[0])
+        for i in range(len(arr)-1):
+            if(arr[i][1] > arr[i+1][0]):
+                return False
+        return True  
+        
+            
+```
+---
+
+## new problem  7
+```
+190. Reverse Bits
+Reverse bits of a given 32 bits signed integer.
+
+Example 1:
+
+Input: n = 43261596
+
+Output: 964176192
+
+Explanation:
+
+Integer	Binary
+43261596	00000010100101000001111010011100
+964176192	00111001011110000010100101000000
+Example 2:
+
+Input: n = 2147483644
+
+Output: 1073741822
+
+Explanation:
+
+Integer	Binary
+2147483644	01111111111111111111111111111100
+1073741822	00111111111111111111111111111110
+ 
+
+Constraints:
+
+0 <= n <= 231 - 2
+n is even.
+```
+```
+class Solution(object):
+    def reverseBits(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        k=0
+        for i in range(32):
+            k|= (n&1)<<(31-i)
+            n>>=1
+        return k
+
+```
+---
+
