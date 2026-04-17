@@ -30,12 +30,41 @@ class Solution:
 ```
 ---
 
-# new code 1 
+# new code 2  Anagram Palindrome
 ```
+Anagram Palindrome
+Given a string s, determine whether its characters can be rearranged to form a palindrome. Return true if it is possible to rearrange the string into a palindrome; otherwise, return false.
 
-```
-```
+Examples
 
+Input: s = "baba"
+Output: true
+Explanation: Can be rearranged to form a palindrome "abba" 
+Input: s = "geeksogeeks"
+Output: true
+Explanation: The characters of the string can be rearranged to form the palindrome "geeksoskeeg".
+Input: s = "geeksforgeeks"
+Output: false
+Explanation: The given string can't be converted into a palindrome.
+Constraints:
+1 ≤ s.length ≤ 106
+s consists of only lowercase English letters.
+```
+```
+class Solution:
+    def canFormPalindrome(self, s):
+        # code here
+        freq = {}
+        for ch in s:
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1 
+        is_odd=0
+        for val in freq.values():
+            if val&1==1:
+                is_odd+=1
+        return is_odd<2
 ```
 ---
 
