@@ -68,7 +68,7 @@ class Solution:
 ```
 ---
 
-# new code 3
+# new code 3 You are given an integer n.
 ```
 You are given an integer n.
 
