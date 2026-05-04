@@ -72,16 +72,48 @@ class Solution:
 ```
 ---
 
-# new code 1
+# new code 3 Palindrome Binary
 ```
+Palindrome Binary
+Given an integer n, determine whether its binary representation forms a palindrome. Return true if the binary representation of n is a palindrome; otherwise, return false.
 
-```
-```
+Note: A binary representation is considered a palindrome if it reads the same forward and backward.
 
+Examples:
+
+Input: n = 17
+Output: true
+Explanation: Binary representation of 17 is (10001)2, which reads the same forward and backward, so it is a palindrome. 
+Input: n = 16
+Output: false
+Explanation: Binary representation of 16 is (10000)2, which is not a palindrome. 
+Constraints:
+1 ≤ n ≤ 109
+```
+```
+class Solution:
+    def isBinaryPalindrome(self, n):
+        # code here
+        s=""
+        while n>0:
+            if n%2==0:
+                s="0"+s
+            else:
+                s="1"+s
+            n>>=1
+        if s==s[::-1]:
+            return True
+        return False
+        '''
+        a=bin(n).replace("0b","")
+        if a==a[::-1]:
+            return True
+        else:
+            return False'''
 ```
 ---
 
-# new code 1
+# new code 4
 ```
 
 ```
